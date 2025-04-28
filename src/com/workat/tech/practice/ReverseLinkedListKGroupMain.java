@@ -19,7 +19,6 @@ public class ReverseLinkedListKGroupMain {
             ListNode result = reverseLinkedListKGroup.reverseLinkedListKGroup(head, k);
             printList(result);
         }
-
         sc.close();
     }
 
