@@ -1,0 +1,16 @@
+Index: src/com/workat/tech/practice/ReverseLinkedListKGroupMain.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/com/workat/tech/practice/ReverseLinkedListKGroupMain.java b/src/com/workat/tech/practice/ReverseLinkedListKGroupMain.java
+--- a/src/com/workat/tech/practice/ReverseLinkedListKGroupMain.java	(revision a4f1365b80c86d25bdc668311dc297c4d7b4ffd5)
++++ b/src/com/workat/tech/practice/ReverseLinkedListKGroupMain.java	(revision 9d759462fbacd41de24b97b5cf3c18c8e5c424f2)
+@@ -19,7 +19,6 @@
+             ListNode result = reverseLinkedListKGroup.reverseLinkedListKGroup(head, k);
+             printList(result);
+         }
+-
+         sc.close();
+     }
+ 
