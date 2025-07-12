@@ -1,4 +1,4 @@
-package com.workat.tech.practice;
+package com.workat.tech.practice.array;
 
 import java.util.ArrayList;
 import java.util.List;

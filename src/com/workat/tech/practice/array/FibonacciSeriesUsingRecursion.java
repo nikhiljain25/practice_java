@@ -1,4 +1,4 @@
-package com.workat.tech.practice;
+package com.workat.tech.practice.array;
 
 public class FibonacciSeriesUsingRecursion {
 

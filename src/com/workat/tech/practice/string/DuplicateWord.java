@@ -1,7 +1,4 @@
-package com.workat.tech.practice;
-
-import java.util.HashSet;
-import java.util.Set;
+package com.workat.tech.practice.string;
 
 public class DuplicateWord {
     public static void main(String[] args) {
