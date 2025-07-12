@@ -1,4 +1,4 @@
-package com.workat.tech.practice.string.arrays;
+package com.workat.tech.practice.string;
 
 /*
 String arr[] = { "abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm" };

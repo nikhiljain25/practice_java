@@ -1,9 +1,15 @@
-package com.workat.tech.practice.string.arrays;
+package com.workat.tech.practice.string;
 
 import java.util.*;
 import java.util.stream.Collectors;
 
 public class MatchStringSearchWithoutSorting {
+
+    public static void main(String[] args) {
+        String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
+        findMatchingStringsWithoutSortingUsingJava7(arr);
+        findMatchingStringsWithoutSortingUsingJava8(arr);
+    }
 
     private static String getCharFrequencyKey(String str) {
         int[] freq = new int[50]; // Assuming ASCII characters
@@ -40,11 +46,5 @@ public class MatchStringSearchWithoutSorting {
                 .stream()
                 .filter(group -> group.size() > 1)
                 .forEach(group -> System.out.println(group + " => contains same character"));
-    }
-
-    public static void main(String[] args) {
-        String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
-        findMatchingStringsWithoutSortingUsingJava7(arr);
-        findMatchingStringsWithoutSortingUsingJava8(arr);
     }
 }
