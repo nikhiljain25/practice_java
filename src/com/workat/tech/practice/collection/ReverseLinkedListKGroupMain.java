@@ -1,4 +1,4 @@
-package com.workat.tech.practice;
+package com.workat.tech.practice.collection;
 
 import java.util.Scanner;
 

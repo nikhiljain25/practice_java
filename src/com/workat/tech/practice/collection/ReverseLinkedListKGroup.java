@@ -51,7 +51,7 @@ Constraints
 1 <= element <= 1000
  */
 
-package com.workat.tech.practice;
+package com.workat.tech.practice.collection;
 
 class ListNode {
     int data;
