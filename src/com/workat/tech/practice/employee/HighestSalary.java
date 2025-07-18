@@ -21,7 +21,7 @@ public class HighestSalary {
         System.out.println("The Highest salary is: " + highestSalaryJava7);
 
         System.out.println("\nJava 8 Implementation..");
-        System.out.println("***********************");
+        System.out.println("***********************E");
         Optional<Double> highestSalaryJava8 = findHighestSalaryUsingJava8(employees);
         System.out.println("The Highest salary is: " + highestSalaryJava8.orElse(null));
     }
