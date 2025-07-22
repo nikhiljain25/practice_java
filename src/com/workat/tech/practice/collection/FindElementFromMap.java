@@ -2,6 +2,8 @@ package com.workat.tech.practice.collection;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
+import java.util.OptionalInt;
 
 public class FindElementFromMap {
 
@@ -16,39 +18,18 @@ public class FindElementFromMap {
 
         // Find HSBC Bank name from the map using java 7 and Java 8 style
         System.out.println("\nFinding HSBC Bank using Java 7 style...");
-
-
         findBankNameUsingJava7(map, "HSBC");
-
-//        System.out.println("\nFinding HSBC Bank using Java 8 style...");
-//        String bankNameJava8 = findBankNameUsingJava8(map, "HSBC");
-//        System.out.println(bankNameJava8);
+        System.out.println("\nFinding HSBC Bank using Java 8 style...");
+        findBankNameUsingJava8(map, "HSBC");
     }
 
-    // Find HSBC Bank name from the map using Map.Entry Set
-
-
-
     private static void findBankNameUsingJava7(HashMap<String, String> map, String hsbc) {
-        // Find key and value pair in the map using Java 7 style
         // Find only Key from the map
         System.out.println("\nFind only Key from the map");
         findMapElement(map, hsbc);
-        // Find key and value using for-each loop
-        System.out.println("\nFind key and value using for-each loop");
-        findMapElementWithoutUsingMapEntrySet(map, hsbc);
         // Find key and value using Map.Entry Set
         System.out.println("\nFind key and value using Map.Entry Set");
         findMethodUsingMapEntrySet(map);
-    }
-
-    private static void findMapElementWithoutUsingMapEntrySet(HashMap<String, String> map, String hsbc) {
-        for (String key : map.keySet()) {
-            String value = map.get(key);
-            if (value.equals(hsbc)) {
-                System.out.println("Found: " + key + " => " + value);
-            }
-        }
     }
 
     private static void findMapElement(HashMap<String, String> map, String hsbc) {
@@ -68,7 +49,15 @@ public class FindElementFromMap {
     }
 
     private static String findBankNameUsingJava8(HashMap<String, String> map, String hsbc) {
-        return null;
+        Optional<String> bankName = map.entrySet().stream()
+                .filter(entry -> entry.getValue().equals(hsbc))
+                .map(entry-> entry.getKey() + " => " + entry.getValue())
+                .findFirst();
+        bankName.ifPresentOrElse(
+                name -> System.out.println("Found: " + name),
+                () -> System.out.println("Bank not found")
+        );
+        return bankName.orElse("Bank not found");
     }
 
 }

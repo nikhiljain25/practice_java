@@ -1,10 +1,51 @@
 package com.workat.tech.practice.string;
 
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
+
 public class DuplicateWord {
     public static void main(String[] args) {
         String input = "This is a test This is only a test";
         System.out.println("Input: " + input);
         System.out.println("Duplicate words: " + findDuplicateWords(input));
+        System.out.println("Duplicate words using Java 8: ");
+        findDuplicateWordsUsingJava8(input);
+        System.out.println("Duplicate words using using Map in Java 8: ");
+        findDuplicateWordsUsingMapJava8(input);
+    }
+
+    private static void findDuplicateWordsUsingJava8(String input) {
+        List<String> duplicates = Arrays.stream(input.toLowerCase().split("\\s+"))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .filter(entry -> entry.getValue() > 1)
+                .map(entry -> entry.getKey() + " : " + entry.getValue())
+                .sorted() // Output will be sorted
+                .collect(Collectors.toList());
+        System.out.println("Duplicate words: " + duplicates);
+    }
+
+    public static void findDuplicateWordsUsingMapJava8 (String input) {
+        Map<String, Long> duplicateCounts = Arrays.stream(input.toLowerCase().split("\\s+"))
+                .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
+                .entrySet().stream()
+                .filter(entry -> entry.getValue() > 1)
+                .sorted(Map.Entry.comparingByKey())
+                .collect(Collectors.toMap(
+                        Map.Entry::getKey,
+                        Map.Entry::getValue,
+                        (e1, e2) -> e1,
+                        LinkedHashMap::new// In case of key collision, keep the first one
+                ));
+
+        // Print outside the logic
+        for (Map.Entry<String, Long> entry : duplicateCounts.entrySet()) {
+            System.out.println("Word: '" + entry.getKey() + "', Count: " + entry.getValue());
+        }
     }
 
     /**
