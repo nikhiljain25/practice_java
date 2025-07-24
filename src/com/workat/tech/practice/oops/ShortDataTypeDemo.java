@@ -7,7 +7,7 @@ package com.workat.tech.practice.oops;
   short c = a + b;
   print(c);
  */
-public class DataTypeDemo {
+public class ShortDataTypeDemo {
 
     public static void main(String[] args) {
         short a = 1;
