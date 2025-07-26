@@ -1,4 +1,4 @@
-package com.workat.tech.practice.employee;
+package com.workat.tech.practice.stream;
 
 import java.util.Arrays;
 import java.util.Comparator;

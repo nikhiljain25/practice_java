@@ -1,6 +1,5 @@
-package com.workat.tech.practice.employee;
+package com.workat.tech.practice.stream;
 
-import javax.swing.text.html.Option;
 import java.util.*;
 
 public class SecondHighestSalary {

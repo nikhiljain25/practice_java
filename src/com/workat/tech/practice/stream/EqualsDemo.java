@@ -1,4 +1,4 @@
-package com.workat.tech.practice.employee;
+package com.workat.tech.practice.stream;
 
 public class EqualsDemo {
     public static void main(String[] args) {
