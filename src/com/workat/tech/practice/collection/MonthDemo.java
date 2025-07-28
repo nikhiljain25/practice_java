@@ -16,7 +16,7 @@ public class MonthDemo {
         );
 
         List<String>result = list.stream()
-                .filter(month -> month!=null && month.endsWith("ber") == false)
+                .filter(month -> !month.endsWith("ber") )
                 .collect(Collectors.toList());
         System.out.println("Months that do not end with 'ber':");
         if (result.isEmpty()) {
