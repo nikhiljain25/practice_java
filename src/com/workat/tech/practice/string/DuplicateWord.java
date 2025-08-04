@@ -26,7 +26,7 @@ public class DuplicateWord {
                 .map(entry -> entry.getKey() + " : " + entry.getValue())
                 .sorted() // Output will be sorted
                 .collect(Collectors.toList());
-        System.out.println("Duplicate words: " + duplicates);
+        System.out.println("Duplicate words using List:\n " + duplicates);
     }
 
     public static void findDuplicateWordsUsingMapJava8 (String input) {
