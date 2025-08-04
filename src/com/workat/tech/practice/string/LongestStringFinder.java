@@ -4,6 +4,15 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 
+
+/*
+Input:
+List<String> strings = Arrays.asList("apple", "banana", "pineapple", "kiwi tastes good",
+                "grapefruit", "orange", "strawberry", "blueberry", "watermelon is good for health");
+Output:
+watermelon is good for health
+ */
+
 public class LongestStringFinder {
     public static void main(String[] args) {
         List<String> strings = Arrays.asList("apple", "banana", "pineapple", "kiwi tastes good",

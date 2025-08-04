@@ -3,7 +3,16 @@ package com.workat.tech.practice.string;
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class MatchStringSearchWithoutSorting {
+/*
+Input:
+String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
+Output: Each group of anagrams
+[abcd, dcba]
+[epam, pame, aepm]
+[java, ajav]
+ */
+
+public class AnagramStringWithoutSorting {
 
     public static void main(String[] args) {
         String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
@@ -41,7 +50,7 @@ public class MatchStringSearchWithoutSorting {
     public static void findMatchingStringsWithoutSortingUsingJava8(String[] arr) {
         System.out.println("\nFinding matching strings using Java 8 style without sorting...");
         Arrays.stream(arr)
-                .collect(Collectors.groupingBy(MatchStringSearchWithoutSorting::getCharFrequencyKey))
+                .collect(Collectors.groupingBy(AnagramStringWithoutSorting::getCharFrequencyKey))
                 .values()
                 .stream()
                 .filter(group -> group.size() > 1)

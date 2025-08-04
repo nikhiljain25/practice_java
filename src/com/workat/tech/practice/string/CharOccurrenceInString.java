@@ -4,6 +4,14 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
+/*
+    * This program demonstrates how to find the occurrence of each character in a string.
+    * Input: "I love my india"
+    * Output: a: 1 d: 1 e: 1 v: 1 i: 2 y: 1 I: 1 l: 1 m: 1 n: 1 o: 1
+    * If case sensitivity is required, use the second method.
+    * Output: a: 1 d: 1 e: 1 v: 1 i: 3 y: 1 l: 1 m: 1 n: 1 o: 1
+ */
+
 public class CharOccurrenceInString {
     public static void main(String[] args) {
         String input = "I love my india";

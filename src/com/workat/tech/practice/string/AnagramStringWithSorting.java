@@ -12,7 +12,7 @@ Output:
 import java.util.*;
 import java.util.stream.Collectors;
 
-public class MatchStringSearchWithSorting {
+public class AnagramStringWithSorting {
     public static void main(String[] args) {
         String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
         findMatchingStringsWithSortingUsingJava7(arr);

@@ -3,6 +3,17 @@ package com.workat.tech.practice.string;
 import java.util.*;
 import java.util.stream.Collectors;
 
+
+/*
+Input:
+ String arr[] = {"abcd", "java", "dcba", "ajav", "xyz", "epam", "pame", "aepm"};
+Output:
+Finding same string count...
+Strings: java ajav | Count: 2
+Strings: xyz | Count: 1
+Strings: epam pame aepm | Count: 3
+Strings: abcd dcba | Count: 2
+ */
 public class SameStringCountJava8 {
 
     public static void main(String[] args) {
@@ -18,7 +29,7 @@ public class SameStringCountJava8 {
 
     // Using java 8 streams
     public static void findSameStringCountsWithSingleStringUsingListJava8(String[] arr) {
-        System.out.println("Finding same string count...");
+        System.out.println("Finding same string count using java 8...");
         Map<String, Integer> countMap = new HashMap<>();
         Map<String, List<String>> groupMap = new HashMap<>();
         for (String str : arr) {
