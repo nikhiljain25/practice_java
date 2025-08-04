@@ -24,7 +24,7 @@ public class RetrieveNonDuplicateElementLists {
 
         List<String> result = Stream.concat(list1.stream(), list2.stream())
                 .filter(item -> !common.contains(item.toLowerCase()))
-                .collect(Collectors.toList());
+                .toList();
         System.out.println("Result (excluding common elements): \n " + result);
     }
 }
