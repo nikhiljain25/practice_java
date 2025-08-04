@@ -2,6 +2,7 @@ package com.workat.tech.practice.collection;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -10,8 +11,8 @@ public class RetrieveNonDuplicateElementLists {
     public static void main(String[] args) {
         List<String> list1 = List.of("Apple", "Banana", "Mango");
         List<String> list2 = Arrays.asList("Tomato", "Onion", "Apple");
-//        getNonDuplicateElementFromList(list1, list2);
-//        getNonDuplicateElementFromListOptimized1(list1, list2);
+        getNonDuplicateElementFromList(list1, list2);
+        getNonDuplicateElementFromListOptimized1(list1, list2);
         getNonDuplicateElementFromListOptimized2(list1, list2);
     }
 
@@ -37,8 +38,8 @@ public class RetrieveNonDuplicateElementLists {
                 .collect(Collectors.groupingBy(String::toLowerCase, Collectors.counting()))
                 .entrySet().stream()
                 .filter(entry -> entry.getValue() == 1)
-                .map(entry -> entry.getKey())
-                .collect(Collectors.toList());
+                .map(Map.Entry::getKey)
+                .toList();
         System.out.println("Result (excluding common elements): \n " + result);
     }
 
