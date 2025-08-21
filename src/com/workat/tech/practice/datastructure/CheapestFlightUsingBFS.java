@@ -2,6 +2,12 @@ package com.workat.tech.practice.datastructure;
 
 import java.util.*;
 
+/**
+ * This code finds the cheapest flight from a source hub to a destination hub
+ * with a maximum number of stops allowed using BFS and a priority queue.
+ * It builds a graph from the input data and uses a priority queue to explore
+ * routes while keeping track of the minimum cost to reach each hub.
+ */
 public class CheapestFlightUsingBFS {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
